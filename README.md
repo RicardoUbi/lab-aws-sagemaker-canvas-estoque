@@ -1,47 +1,26 @@
 # 📊 Previsão de Estoque Inteligente na AWS com [SageMaker Canvas](https://aws.amazon.com/pt/sagemaker/canvas/)
 
-Bem-vindo ao desafio de projeto "Previsão de Estoque Inteligente na AWS com SageMaker Canvas. Neste Lab DIO, você aprenderá a usar o SageMaker Canvas para criar previsões de estoque baseadas em Machine Learning (ML). Siga os passos abaixo para completar o desafio!
+Bem-vindo ao desafio de projeto Previsão de Estoque Inteligente na AWS com SageMaker Canvas. O objetivo deste desafio é detalhar todo o processo de criação de um Modelo de ML para uma Previsão de Estoque Inteligente.
 
-## 📋 Pré-requisitos
+## Detalhamento Passo a Passo
 
-Antes de começar, certifique-se de ter uma conta na AWS. Se precisar de ajuda para criar sua conta, confira nosso repositório [AWS Cloud Quickstart](https://github.com/digitalinnovationone/aws-cloud-quickstart).
+### 1. Selecionando o Dataset
 
+-   Naveguei até a pasta `datasets` deste repositório. Nesta pasta contém alguns datasets. O dataset escolhido para treinar e testar o modelo de ML, foi o "dataset-1000-com-preco-variavel-e-renovacao-estoque.csv".
+-   Carreguei o dataset localmente e realizei uma análise exploratória para entender sua estrutura e características.
+-   Após escolher e criar o dataset, fiz o upload do dataset no SageMaker Canvas.
 
-## 🎯 Objetivos Deste Desafio de Projeto (Lab)
+### 2. Treinar ML
 
-![image](https://github.com/digitalinnovationone/lab-aws-sagemaker-canvas-estoque/assets/730492/72f5c21f-5562-491e-aa42-2885a3184650)
+-   No SageMaker Canvas, importei o dataset que selecionei.
+-   Defini a variável de destino como QUANTIDADE_ESTOQUE e as variáveis preditivas como ID_PRODUTO, DATA_EVENTO e PRECO.
+-   Iniciei o treinamento do modelo. O tempo foi de 15 min.
 
-- Dê um fork neste projeto e reescreva este `README.md`. Sinta-se à vontade para detalhar todo o processo de criação do seu Modelo de ML para uma "Previsão de Estoque Inteligente".
-- Para isso, siga o [passo a passo] descrito a seguir e evolua as suas habilidades em ML no-code com o Amazon SageMaker Canvas.
-- Ao concluir, envie a URL do seu repositório com a solução na plataforma da DIO.
+### 3. Analisar e Prever
 
+-   Após o treinamento, examinei as métricas de desempenho do modelo.
+-   Alguns produtos (por exemplo, ID 1, ID 5) estão consistentemente em alta demanda e exigem reabastecimento frequente.
+-   Outros produtos (por exemplo, ID 18, ID 24) têm menor demanda e podem ser reabastecidos com menos frequência.
+-   Outros produtos (por exemplo, ID 1, ID 5, ID 16) experimentam flutuações de preços mais frequentes.
 
-## 🚀 Passo a Passo
-
-### 1. Selecionar Dataset
-
--   Navegue até a pasta `datasets` deste repositório. Esta pasta contém os datasets que você poderá escolher para treinar e testar seu modelo de ML. Sinta-se à vontade para gerar/enriquecer seus próprios datasets, quanto mais você se engajar, mais relevante esse projeto será em seu portfólio.
--   Escolha o dataset que você usará para treinar seu modelo de previsão de estoque.
--   Faça o upload do dataset no SageMaker Canvas.
-
-### 2. Construir/Treinar
-
--   No SageMaker Canvas, importe o dataset que você selecionou.
--   Configure as variáveis de entrada e saída de acordo com os dados.
--   Inicie o treinamento do modelo. Isso pode levar algum tempo, dependendo do tamanho do dataset.
-
-### 3. Analisar
-
--   Após o treinamento, examine as métricas de performance do modelo.
--   Verifique as principais características que influenciam as previsões.
--   Faça ajustes no modelo se necessário e re-treine até obter um desempenho satisfatório.
-
-### 4. Prever
-
--   Use o modelo treinado para fazer previsões de estoque.
--   Exporte os resultados e analise as previsões geradas.
--   Documente suas conclusões e qualquer insight obtido a partir das previsões.
-
-## 🤔 Dúvidas?
-
-Esperamos que esta experiência tenha sido enriquecedora e que você tenha aprendido mais sobre Machine Learning aplicado a problemas reais. Se tiver alguma dúvida, não hesite em abrir uma issue neste repositório ou entrar em contato com a equipe da DIO.
+## Divirta-se!
